@@ -109,7 +109,7 @@ def run_strategy(df, ma_period, rsi_limit, sell_buffer):
     return (1 + df['Strategy_Ret']).prod(), df
 
 # ==========================================
-# 3. 결과 분석 및 출력 (강화됨)
+# 3. 결과 분석 및 출력 (강화 버전)
 # ==========================================
 def analyze_today(df, ma_period, rsi_limit, sell_buffer, total_score):
     last_row = df.iloc[-1]

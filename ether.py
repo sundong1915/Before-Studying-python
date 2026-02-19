@@ -9,10 +9,10 @@ from pandas_datareader import data as pdr
 warnings.filterwarnings("ignore")
 
 # ==========================================
-# 1. 데이터 수집 (ETH-USD & 장단기 금리차)
+# 1. 데이터 수집 (ETH-USD & 장단기 금리차 차이)
 # ==========================================
 def get_combined_data():
-    print("⏳ 데이터 수집 중... (ETH-USD, SHY, 10Y-2Y Spread)")
+    print("⏳ 데이터 수집중... (ETH-USD, SHY, 10Y-2Y Spread)")
     
     # 이더리움은 2017년 하반기부터 데이터가 안정적입니다.
     tickers = ['ETH-USD', 'SHY']
@@ -136,7 +136,7 @@ def analyze_today(df, ma_period, rsi_limit, sell_buffer, total_score):
     print(f"   • 분석 기간 : {start_date.strftime('%Y-%m-%d')} ~ {end_date.strftime('%Y-%m-%d')}")
     print(f"   • 누적 수익률 : {(total_score - 1) * 100:,.0f}% ({total_score:.1f}배)")
     print(f"   • 연평균 수익률 (CAGR) : {cagr * 100:.2f}%")
-    print(f"   • 최대 낙폭 (MDD) : {mdd * 100:.2f}%")
+    print(f"   • 최대 낙폭 (MDD값) : {mdd * 100:.2f}%")
     
     print("-" * 60)
     print(f"✨ [도출된 최적 파라미터]")
